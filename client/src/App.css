@@ -1,5 +1,6 @@
 /*
 Stormy = #494E6B
+373c52
 Cloud = #98878F
 Sunset = #985E6D
 Evening = #192231
@@ -10,7 +11,21 @@ Posy (pink) = #813772
 Embers (red) = #B82601
 
 */
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  color: #fff;
+}
 
 .App {
   text-align: center;
@@ -22,21 +37,106 @@ Embers (red) = #B82601
 } /* remove */
 
 .App-header {
-  background-color: #222;
-  height: 100px;
-  padding: 20px;
-  color: white;
+  height: 37px;
+  padding: 0 5px 10px 25px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.72em;
+  color: #fff;
 }
 
-.App-intro {
-  font-size: large;
+.Search {
+  width: 100%;
+  float:center;
+  margin: 0 auto;
+
+  display:inline;
+  width: 40%;
+  padding-left: 50px;
+}
+
+.Search input {
+  font-size: .65em;
+  border: 0;
+  padding: 0 10px;
+  border: 2px solid rgba(245, 245, 241, 0.1);
+  border-radius: 37px;
+  outline: none;
+  background: transparent;
+  transition: border .25s ease, width .125s ease .125s;
+  color: #fff;
+}
+
+.Search input:focus {
+  border: 2px solid rgba(245, 245, 241, 0.1);;
+  width: 35%;
+}
+
+.Profile {
+  float:right;
+  width: 20%;
+}
+.Profile ul {
+  display: inline;
+  list-style: none;
+  height: 37px;
+  padding: 0 10px;
+}
+.Profile ul li {
+  display: inline;
+  font-weight: 400;
+  padding: 7px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.Profile ul li:hover {
+  background: #B82601;
+  cursor: pointer;
+}
+
+.Carousel {
+  padding-top: 50px;
+}
+
+.Carousel img{
+  margin: 0 auto;
+
+}
+
+.Carousel h3, p {
+  color: #062F2F;
+}
+
+.ButtonGroup {
+  text-align: center
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 85px;
+  padding: 20px;
+  margin: 40px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  -webkit-transition: border .125s ease, background .125s ease;
+  transition: border .125s ease, background .125s ease;
+}
+.Button:hover {
+  border: 1px solid #98878F;
+}
+.Button[data-primary='true'] {
+  border: 2px solid #985E6D;
+}
+.Button[data-primary='true']:hover {
+  background: #985E6D;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} /*remove */

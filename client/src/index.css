@@ -1,5 +1,22 @@
+/*
+Stormy = #494E6B
+Cloud = #98878F
+Sunset = #985E6D
+Evening = #192231
+0f131d
+
+Black = #000
+Ink (blue) = #062F2F
+Posy (pink) = #813772
+Embers (red) = #B82601
+
+*/
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #0f131d;
+  background-image: url('./images/kyle-gregory-devaras-241280.jpg');
+  background-size: cover;
 }
