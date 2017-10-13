@@ -1,15 +1,29 @@
+/*
+Stormy = #494E6B
+Cloud = #98878F
+Sunset = #985E6D
+Evening = #192231
+
+Black = #000
+Ink (blue) = #062F2F
+Posy (pink) = #813772
+Embers (red) = #B82601
+
+*/
+
+
 .App {
   text-align: center;
-}
+} /*remove*/
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
-}
+} /* remove */
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }

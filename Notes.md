@@ -39,3 +39,9 @@
 14. heroku buildpacks:add heroku/nodejs --index 1
 15. heroku buildpacks:add heroku/ruby --index 2
 16. git push heroku master
+
+
+
+
+
+/<img src={logo} className="App-logo" alt="logo" /> 
