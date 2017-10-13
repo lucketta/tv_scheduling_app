@@ -27,4 +27,12 @@
     task :start => 'start:development'
 
 
-8. 
+8. scripts in package.json root
+  - "build": "cd client && npm install && npm run build && cd ..",
+   "deploy": "cp -a client/build/. public/",
+   "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+
+9. heroku apps:create
+10. rename -
+11. terminal: heroku config:set NPM_CONFIG_PRODUCTION=false
+12. rename: heroku apps:rename [newname]
