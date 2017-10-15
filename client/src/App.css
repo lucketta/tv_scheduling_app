@@ -11,6 +11,17 @@ Posy (pink) = #813772
 Embers (red) = #B82601
 
 */
+.Hr {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -5px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -109,28 +120,34 @@ time, mark, audio, video {
 }
 
 .ButtonGroup {
-  text-align: center
+  text-align: center;
 }
-
+.ButtonGroup a{
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 1;
+}
 .Button {
+  background: rgba(152,135,143, 0.2);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 12%;
   height: 85px;
-  padding: 20px;
-  margin: 40px;
+  padding: 10px;
+  margin: 35px;
   border-radius: 20px;
-  font-size: 18px;
-  font-weight: 600;
+
   -webkit-transition: border .125s ease, background .125s ease;
   transition: border .125s ease, background .125s ease;
 }
+
 .Button:hover {
-  border: 1px solid #98878F;
+  border: 1px solid #fff;
 }
 .Button[data-primary='true'] {
-  border: 2px solid #985E6D;
+  border: 2px solid #fff;
 }
 .Button[data-primary='true']:hover {
   background: #985E6D;

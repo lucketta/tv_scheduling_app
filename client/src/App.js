@@ -4,12 +4,14 @@ import {Button,ButtonToolbar, Glyphicon} from 'react-bootstrap';
 import './App.css';
 import PopularShowCarousel from './containers/PopularShowCarousel';
 import DisplayShowButtons from './containers/DisplayShowButtons';
-
+import {BrowserRouter as Router, Route,Link,Redirect,} from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <div>
+        <Router>
+        <div>
+
         <header className="App-header">
           <h1 className="App-title">
               TV Scheduling App
@@ -27,8 +29,12 @@ class App extends Component {
           </h1>
         </header>
         <PopularShowCarousel />
+        <hr className="Hr"/>
+
         <DisplayShowButtons />
-      </div>
+
+        </div>
+        </Router>
     );
   }
 }
