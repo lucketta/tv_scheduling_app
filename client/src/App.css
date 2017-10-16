@@ -38,15 +38,6 @@ time, mark, audio, video {
   color: #fff;
 }
 
-.App {
-  text-align: center;
-} /*remove*/
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-} /* remove */
-
 .App-header {
   height: 37px;
   padding: 0 5px 10px 25px;
@@ -138,9 +129,6 @@ time, mark, audio, video {
   padding: 10px;
   margin: 35px;
   border-radius: 20px;
-
-  -webkit-transition: border .125s ease, background .125s ease;
-  transition: border .125s ease, background .125s ease;
 }
 
 .Button:hover {
@@ -153,7 +141,16 @@ time, mark, audio, video {
   background: #985E6D;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} /*remove */
+.ShowGrid {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ShowCol {
+  width: 100%;
+  height: 75%;
+  overflow: scroll;
+  background: rgba(25,34,49, 0.5);
+  border: 1px solid #000;
+}

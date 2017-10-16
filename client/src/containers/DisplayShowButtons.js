@@ -12,6 +12,7 @@ class DisplayShowButtons extends Component {
   }
 
 
+
   handleOnClick = (event) => {
     this.state.path = event.target.pathname;
   }
@@ -24,8 +25,8 @@ class DisplayShowButtons extends Component {
           <Link to="/on-air" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>On the Air</Link>
           <Link to="airing-today" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Airing Today</Link>
         </div>
-        
-        <FetchShowData setData={this.state.path}/>
+
+        <FetchShowData setData={this.state.path} />
 
       </div>
 

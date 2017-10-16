@@ -13,7 +13,7 @@ class FetchShowData extends Component {
     }
   }
 
-  componentDidMount () {
+  FetchTvShow() {
     const that = this;
 
     return fetch('/api/shows')
@@ -23,7 +23,15 @@ class FetchShowData extends Component {
         }).then(json => {
           that.state.show_array = json;
       })
-}
+  }
+
+  componentWillMount () {
+    this.FetchTvShow();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.FetchTvShow();
+  }
 
   render(){
     return (
