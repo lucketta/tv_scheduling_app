@@ -84,7 +84,6 @@ time, mark, audio, video {
   display: inline;
   list-style: none;
   height: 3px;
-  padding: 0 10px;
 }
 .Profile ul li {
   display: inline;
@@ -108,7 +107,7 @@ time, mark, audio, video {
 }
 
 .Carousel h3, p {
-  color: #062F2F;
+  color: #fff;
 }
 
 .ButtonGroup {
