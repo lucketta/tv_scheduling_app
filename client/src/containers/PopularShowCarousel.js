@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Carousel, Item, Caption} from 'react-bootstrap';
+import {Carousel} from 'react-bootstrap';
 
 
 class PopularShowCarousel extends Component {

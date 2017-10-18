@@ -1,26 +1,21 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route,Link,Redirect,} from 'react-router-dom';
-import {Grid,Row, Col, Thumbnail, Button, Collapse} from 'react-bootstrap';
+import {Grid, Col, Thumbnail} from 'react-bootstrap';
 
 
 class ShowTvShows extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render(){
-    var test = this.props.printArray;
+    var show_array = this.props.printArray;
+
     return (
       <div>
       <Grid className="ShowGrid">
-        {test.map((show, index) => (
-          <Col xs={6} md={4} >
-
-          <Thumbnail src="/assets/thumbnaildiv.png" alt={show.name} className="ShowCol">
+        {show_array.map((show) => (
+          <Col xs={6} md={4} key={show.id} >
+          <Thumbnail src={'http://image.tmdb.org/t/p/original' + show.backdrop_path} alt={show.name} className="ShowCol" >
             <h3>{show.name}</h3>
-            <p>{show.summary}</p>
+            <p>{show.overview}</p>
           </Thumbnail>
-
           </Col>
         ))}
         </Grid>

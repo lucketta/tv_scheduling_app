@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import {Button,ButtonToolbar, Glyphicon} from 'react-bootstrap';
 import './App.css';
 import PopularShowCarousel from './containers/PopularShowCarousel';
 import DisplayShowButtons from './containers/DisplayShowButtons';
-import {BrowserRouter as Router, Route,Link,Redirect,} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 class App extends Component {
   render() {

@@ -1,21 +1,53 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route,Link,Redirect,} from 'react-router-dom';
-import FetchShowData from './FetchShowData';
+import {Link} from 'react-router-dom';
+import ShowTvShows from './ShowTvShows';
+
 
 class DisplayShowButtons extends Component {
   constructor() {
     super();
 
     this.state = {
-      path: ""
-    };
+      show_array: []
+    }
   }
-
-
 
   handleOnClick = (event) => {
-    this.state.path = event.target.pathname;
+    this.FetchTvShow(event.target.pathname)
   }
+
+  FetchTvShow(pathToFetch) {
+    var requestUrl = 'https://api.themoviedb.org/3/tv/';
+
+    switch (pathToFetch) {
+      case '/popular':
+        requestUrl += 'popular'
+        break;
+      case '/top-rated':
+        requestUrl += 'top_rated'
+        break;
+      case '/on-air':
+        requestUrl += 'on_the_air'
+        break;
+      case '/airing-today':
+        requestUrl += 'airing_today'
+        break;
+      default:
+        requestUrl = "";
+    }
+
+    requestUrl += '?api_key=6c9ca5f9c165a06d30f01771e5b3a8ec&language=en-US&page=1';
+
+    return fetch(requestUrl)
+        .then(res => {
+          return res.json();
+        }).then(json => {
+          this.setState({show_array: json.results})
+      }).catch((err)=>{
+        console.log(err);
+      })
+  }
+
   render(){
     return (
       <div>
@@ -23,10 +55,10 @@ class DisplayShowButtons extends Component {
           <Link to="/popular" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Popular Shows</Link>
           <Link to="/top-rated" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Top Rated</Link>
           <Link to="/on-air" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>On the Air</Link>
-          <Link to="airing-today" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Airing Today</Link>
+          <Link to="/airing-today" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Airing Today</Link>
         </div>
 
-        <FetchShowData setData={this.state.path} />
+        <ShowTvShows printArray={this.state.show_array}/>
 
       </div>
 
