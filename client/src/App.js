@@ -28,6 +28,8 @@ class App extends Component {
             </div>
           </h1>
         </header>
+        <hr/>
+
         <PopularShowCarousel />
         <hr className="Hr"/>
 

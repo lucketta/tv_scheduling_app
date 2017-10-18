@@ -39,7 +39,7 @@ time, mark, audio, video {
 }
 
 .App-header {
-  height: 37px;
+  height: 15px;
   padding: 0 5px 10px 25px;
 }
 
@@ -79,10 +79,11 @@ time, mark, audio, video {
   float:right;
   width: 20%;
 }
+
 .Profile ul {
   display: inline;
   list-style: none;
-  height: 37px;
+  height: 3px;
   padding: 0 10px;
 }
 .Profile ul li {
@@ -98,7 +99,7 @@ time, mark, audio, video {
 }
 
 .Carousel {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .Carousel img{
