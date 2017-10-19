@@ -6,7 +6,6 @@ class ShowTvShows extends Component {
 
   render(){
     var show_array = this.props.printArray;
-
     return (
       <div>
       <Grid className="ShowGrid">

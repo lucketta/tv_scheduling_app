@@ -13,7 +13,7 @@ class DisplayShowButtons extends Component {
   }
 
   handleOnClick = (event) => {
-    this.FetchTvShow(event.target.pathname)
+    this.FetchTvShow(event.target.pathname);
   }
 
   FetchTvShow(pathToFetch) {
@@ -51,7 +51,7 @@ class DisplayShowButtons extends Component {
   render(){
     return (
       <div>
-        <div className="ButtonGroup">
+        <div className="ButtonGroup" id="content">
           <Link to="/popular" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Popular Shows</Link>
           <Link to="/top-rated" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Top Rated</Link>
           <Link to="/on-air" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>On the Air</Link>

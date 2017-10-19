@@ -11,7 +11,7 @@ Posy (pink) = #813772
 Embers (red) = #B82601
 
 */
-.Hr {
+.Hr-Up {
   display: block;
   content: "";
   height: 30px;
@@ -19,6 +19,17 @@ Embers (red) = #B82601
   border-style: solid;
   border-color: #8c8b8b;
   border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+.Hr-Down {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: 21px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 1 0 0px 0;
   border-radius: 20px;
 }
 
@@ -40,7 +51,7 @@ time, mark, audio, video {
 
 .App-header {
   height: 15px;
-  padding: 0 5px 10px 25px;
+  padding: 0 5px 30px 25px;
 }
 
 .App-title {
@@ -49,56 +60,74 @@ time, mark, audio, video {
 }
 
 .Search {
-  width: 100%;
+  width: 60%;
   float:center;
-  margin: 0 auto;
-
-  display:inline;
-  width: 40%;
-  padding-left: 50px;
+  display:inline-flex;
+  padding-left: 100px;
 }
 
 .Search input {
   font-size: .65em;
-  border: 0;
   padding: 0 10px;
-  border: 2px solid rgba(245, 245, 241, 0.1);
-  border-radius: 37px;
+  border: 1px 0px solid rgba(0, 0, 0, 1);
+  height: 31px;
+  width: 200%;
   outline: none;
-  background: transparent;
-  transition: border .25s ease, width .125s ease .125s;
-  color: #fff;
+  color: #000;
 }
 
-.Search input:focus {
-  border: 2px solid rgba(245, 245, 241, 0.1);;
-  width: 35%;
+.Search_Button {
+  border: 1px;
+  width: 8%;
+  height: 30px;
+  border-radius: 0;
+  outline: none;
+  background-color: #b9b9b9;
+  margin-right: 150px;
+}
+
+.Search_Button:focus {
+  outline: none;
+}
+
+.Glyph {
+  color: #000;
+  font-size: 110%;
+  outline: none;
 }
 
 .Profile {
-  float:right;
-  width: 20%;
+  display: inline-flex;
+  float: right;
+  margin: 0 auto;
 }
 
 .Profile ul {
-  display: inline;
+  display: inline-flex;
   list-style: none;
-  height: 3px;
 }
+
 .Profile ul li {
-  display: inline;
   font-weight: 400;
-  padding: 7px 10px;
+  padding: 0px 10px;
   font-size: 14px;
-  border-radius: 3px;
 }
-.Profile ul li:hover {
-  background: #B82601;
+
+.Profile_Button {
+  border: none;
+}
+
+.Profile_Button:focus {
   cursor: pointer;
+  outline: none;
 }
 
 .Carousel {
-  padding-top: 10px;
+  background-color: #fff;
+}
+
+.carousel-control {
+  opacity:0;
 }
 
 .Carousel img{
@@ -142,7 +171,7 @@ time, mark, audio, video {
   border: 1px solid #000;
 }
 .Button[data-primary='true'] {
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 .Button[data-primary='true']:hover {
   background: #985E6D;
@@ -159,6 +188,6 @@ time, mark, audio, video {
   height: 300px;
   margin-bottom: 30px;
   overflow: auto;
-  background: rgba(25,34,49, 0.5);
-  border: 1px solid #000;
+  background: rgba(152,135,143, 1);
+  border: 1px solid #fff;
 }

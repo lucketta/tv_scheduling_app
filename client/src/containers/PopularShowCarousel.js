@@ -6,6 +6,7 @@ class PopularShowCarousel extends Component {
   render () {
     return (
      <div >
+     <hr/>
        <Carousel className="Carousel">
          <Carousel.Item>
          <img src="http://image.tmdb.org/t/p/original/6c4weB3UycHwPgzv31Awt7nku9y.jpg" alt="Stranger Things"/>
