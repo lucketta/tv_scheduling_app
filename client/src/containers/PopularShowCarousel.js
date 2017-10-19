@@ -8,31 +8,31 @@ class PopularShowCarousel extends Component {
      <div >
        <Carousel className="Carousel">
          <Carousel.Item>
-         <img width={850} height={300} src="http://image.tmdb.org/t/p/original/6c4weB3UycHwPgzv31Awt7nku9y.jpg" alt="Stranger Things"/>
+         <img src="http://image.tmdb.org/t/p/original/6c4weB3UycHwPgzv31Awt7nku9y.jpg" alt="Stranger Things"/>
            <Carousel.Caption>
              <h3>Stranger Things</h3>
              <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.</p>
            </Carousel.Caption>
          </Carousel.Item>
          <Carousel.Item>
-         <img width={900} height={300} src="http://image.tmdb.org/t/p/original/bzoZjhbpriBT2N5kwgK0weUfVOX.jpg" alt="Breaking Bad" />
+         <img src="http://image.tmdb.org/t/p/original/bzoZjhbpriBT2N5kwgK0weUfVOX.jpg" alt="Breaking Bad" />
           <Carousel.Caption>
              <h3>Breaking Bad</h3>
-             <p>Breaking Bad is the story of Walter White, a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer at the beginning of the series. He turns to a life of crime, producing and selling methamphetamine, in order to secure his familys financial future before he dies, teaming with his former student, Jesse Pinkman. </p>
+             <p>Breaking Bad is the story of Walter White, a struggling high school chemistry teacher who is diagnosed with inoperable lung cancer. He turns to a life of crime, producing and selling methamphetamine, teaming with his former student, Jesse Pinkman. </p>
            </Carousel.Caption>
          </Carousel.Item>
          <Carousel.Item>
-         <img width={900} height={300} src="http://image.tmdb.org/t/p/original/bvS50jBZXtglmLu72EAt5KgJBrL.jpg" alt="Sherlock" />
+         <img src="http://image.tmdb.org/t/p/original/bvS50jBZXtglmLu72EAt5KgJBrL.jpg" alt="Sherlock" />
           <Carousel.Caption>
              <h3>Sherlock</h3>
              <p>A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.</p>
            </Carousel.Caption>
          </Carousel.Item>
          <Carousel.Item>
-         <img width={900} height={300} src="http://image.tmdb.org/t/p/original/4hWfYN3wiOZZXC7t6B70BF9iUvk.jpg" alt="The Wire" />
+         <img src="http://image.tmdb.org/t/p/original/4hWfYN3wiOZZXC7t6B70BF9iUvk.jpg" alt="The Wire" />
           <Carousel.Caption>
              <h3>The Wire</h3>
-             <p>Told from the points of view of both the Baltimore homicide and narcotics detectives and their targets, the series captures a universe in which the national war on drugs has become a permanent, self-sustaining bureaucracy, and distinctions between good and evil are routinely obliterated.</p>
+             <p>Told from the points of view of both the Baltimore homicide and narcotics detectives and their targets, the series captures a universe in which the national war on drugs has become a permanent, self-sustaining bureaucracy.</p>
            </Carousel.Caption>
          </Carousel.Item>
        </Carousel>
