@@ -10,7 +10,7 @@ class ShowTvShows extends Component {
       <div>
       <Grid className="ShowGrid">
         {show_array.map((show) => (
-          <Col xs={6} md={4} key={show.id} >
+          <Col xs={6} md={3} key={show.id} >
           <Thumbnail src={'http://image.tmdb.org/t/p/original' + show.backdrop_path} alt={show.name} className="ShowCol" >
             <h3>{show.name}</h3>
             <p>{show.overview}</p>
