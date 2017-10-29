@@ -9,6 +9,13 @@ import {Button, Glyphicon} from 'react-bootstrap';
 
 
 class App extends Component {
+
+  handleSearchedShow = (info) => {
+    console.log(info);
+    
+  }
+
+
   render() {
     return (
         <Router>
@@ -17,8 +24,8 @@ class App extends Component {
           <h1 className="App-title">
               TV Scheduling App
 
-            <SearchShows />
-            
+            <SearchShows searchedShow={this.handleSearchedShow}/>
+
             <div className="Profile">
                 <ul>
                   <li><Button className="Profile_Button"> Sign In </Button></li>
@@ -30,6 +37,8 @@ class App extends Component {
 
         <PopularShowCarousel />
         <DisplayShowButtons />
+
+
 
         </div>
         </Router>

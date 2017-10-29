@@ -8,7 +8,6 @@ class SearchShows extends Component {
 
     this.state = {
       searchBar: "",
-      show: {},
     }
   }
 
@@ -17,7 +16,6 @@ class SearchShows extends Component {
   }
 
   handleOnClick = (event) => {
-    console.log("TESTs")
      this.FetchSearch();
   }
 
@@ -28,10 +26,9 @@ class SearchShows extends Component {
           .then(res => {
             return res.json();
           }).then(json => {
-            console.log("here")
-            console.log(json.results)
-            debugger;
-            this.setState({show: json.results[0]})
+            return json.results;
+        }).then(result => {
+          this.props.searchedShow(result);
         }).catch((err)=>{
           console.log(err);
         })
@@ -43,12 +40,6 @@ class SearchShows extends Component {
         <input className="fa fa-search" type="search" placeholder="Search for a title..." onChange={event => this.handleOnChange(event)}></input>
 
         <Button className="Search_Button"> <Glyphicon glyph="glyphicon glyphicon-search" className="Glyph" onClick={event => this.handleOnClick(event)}/></Button>
-
-            <Thumbnail  alt={this.state.show.name} className="ShowCol" >
-              <h3> {this.state.show.name}</h3>
-              <p>{this.state.show.overview}</p>
-            </Thumbnail>
-
 
       </div>
 

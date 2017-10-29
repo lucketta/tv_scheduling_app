@@ -44,4 +44,11 @@
 
 
 
-/<img src={logo} className="App-logo" alt="logo" /> 
+/<img src={logo} className="App-logo" alt="logo" />
+
+
+
+// <Thumbnail  alt={this.state.show.name} className="ShowCol" >
+//   <h3> {this.state.show.name}</h3>
+//   <p>{this.state.show.overview}</p>
+// </Thumbnail>
