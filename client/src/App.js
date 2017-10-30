@@ -3,16 +3,23 @@ import './App.css';
 import PopularShowCarousel from './containers/PopularShowCarousel';
 import DisplayShowButtons from './containers/DisplayShowButtons';
 import SearchShows from './containers/SearchShows';
-
+import ShowTvShows from './containers/ShowTvShows';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Button, Glyphicon} from 'react-bootstrap';
+import {Grid, Col, Thumbnail} from 'react-bootstrap';
 
 
 class App extends Component {
+  constructor () {
+    super();
 
-  handleSearchedShow = (info) => {
-    console.log(info);
-    
+    this.state = {
+      showSearched: [],
+    }
+  }
+
+  handlePrintShows = (info) => {
+    this.setState({showSearched: info});
   }
 
 
@@ -24,7 +31,7 @@ class App extends Component {
           <h1 className="App-title">
               TV Scheduling App
 
-            <SearchShows searchedShow={this.handleSearchedShow}/>
+            <SearchShows searchedShow={this.handlePrintShows}/>
 
             <div className="Profile">
                 <ul>
@@ -36,9 +43,9 @@ class App extends Component {
         </header>
 
         <PopularShowCarousel />
-        <DisplayShowButtons />
+        <DisplayShowButtons displayShows={this.handlePrintShows}/>
 
-
+        <ShowTvShows printArray={this.state.showSearched}/>
 
         </div>
         </Router>

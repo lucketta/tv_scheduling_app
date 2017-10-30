@@ -16,7 +16,11 @@ class SearchShows extends Component {
   }
 
   handleOnClick = (event) => {
-     this.FetchSearch();
+    if (this.state.searchBar !== "") {
+      this.FetchSearch();
+   }else {
+     this.props.searchedShow("");
+   }
   }
 
     FetchSearch() {

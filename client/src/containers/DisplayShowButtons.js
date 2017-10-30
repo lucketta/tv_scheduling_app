@@ -1,17 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import ShowTvShows from './ShowTvShows';
 
 
 class DisplayShowButtons extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      show_array: []
-    }
-  }
-
   handleOnClick = (event) => {
     this.FetchTvShow(event.target.pathname);
   }
@@ -42,7 +33,9 @@ class DisplayShowButtons extends Component {
         .then(res => {
           return res.json();
         }).then(json => {
-          this.setState({show_array: json.results})
+          return json.results;
+      }).then(result => {
+        this.props.displayShows(result);
       }).catch((err)=>{
         console.log(err);
       })
@@ -57,9 +50,6 @@ class DisplayShowButtons extends Component {
           <Link to="/on-air" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>On the Air</Link>
           <Link to="/airing-today" className="Button" data-primary="true" onClick={this.handleOnClick.bind(this)}>Airing Today</Link>
         </div>
-
-        <ShowTvShows printArray={this.state.show_array}/>
-
       </div>
 
     );

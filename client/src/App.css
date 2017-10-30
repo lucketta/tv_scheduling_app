@@ -137,6 +137,7 @@ time, mark, audio, video {
   margin: 0 auto;
   width: 50%;
   height: 50%;
+  cursor: pointer;
 }
 
 .Carousel p {
@@ -147,6 +148,7 @@ time, mark, audio, video {
 
 .Carousel h3, p {
   color: #fff;
+  cursor: pointer;
 }
 
 .ButtonGroup {
@@ -193,4 +195,19 @@ time, mark, audio, video {
   overflow: auto;
   background: rgba(152,135,143, 1);
   border: 1px solid #000;
+}
+
+.ShowCol:hover {
+  cursor: pointer;
+
+}
+
+.custom-modal {
+  width: 60%;
+}
+.custom-modal p{
+  color: black;
+}
+.custom-modal img{
+  width: 100%;
 }
